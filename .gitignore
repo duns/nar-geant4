@@ -1,0 +1,14 @@
+.project
+.classpath
+.settings
+*.tar.gz
+*.zip
+config
+data
+environments
+examples
+source
+target
+Configure
+LICENSE
+ReleaseNotes

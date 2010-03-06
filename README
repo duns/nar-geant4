@@ -1,0 +1,21 @@
+This project attempts to compile and link a "single" static library
+of Geant4 (http://geant4.cern.ch) using the maven-nar-plugin.
+
+You will (for the moment) need clhep compiled by hand or download
+the binary for you platform (http://cern.ch/clhep).
+
+The checkout of this project ONLY contains the file(s) necessary
+to compile with NAR. The sources you need to overlay for the 
+Geant4 version you want to compile. 
+
+Edit (for now) the pom.xml file to point to the correct version of
+clhep.
+
+Run "mvn" and look for the static library in (for example):
+
+geant4.9.3/target/nar/geant4-4.9.3-SNAPSHOT-x86_64-MacOSX-g++-static/lib/x86_64-MacOSX-g++/static/
+
+This example was (for the moment) only tested on x86-MacOSX-g++.
+
+Mark Donszelmann (Mark.Donszelmann@gmail.com)
+
