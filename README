@@ -1,8 +1,8 @@
 This project attempts to compile and link a "single" static library
 of Geant4 (http://geant4.cern.ch) using the maven-nar-plugin.
 
-You will (for the moment) need clhep compiled by hand or download
-the binary for you platform (http://cern.ch/clhep).
+You will need clhep compiled by NAR which you can get from
+http://github.com/duns/nar-clhep
 
 The checkout of this project ONLY contains the file(s) necessary
 to compile with NAR. The sources you need to overlay for the 
