@@ -8,9 +8,6 @@ The checkout of this project ONLY contains the file(s) necessary
 to compile with NAR. The sources you need to overlay for the 
 Geant4 version you want to compile. 
 
-Edit (for now) the pom.xml file to point to the correct version of
-clhep.
-
 Run "mvn" and look for the static library in (for example):
 
 geant4.9.3/target/nar/geant4-4.9.3-SNAPSHOT-x86_64-MacOSX-g++-static/lib/x86_64-MacOSX-g++/static/
