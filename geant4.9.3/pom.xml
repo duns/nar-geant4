@@ -3,7 +3,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>geant4.org</groupId>
+  <groupId>org.geant4</groupId>
   <artifactId>geant4</artifactId>
   <packaging>nar</packaging>
   
@@ -13,6 +13,20 @@
     Geant4 in NAR form
   </description>
   <url>http://www.geant4.org/</url>
+
+      <pluginRepositories>
+        <pluginRepository>
+          <id>duns-maven-snapshots</id>
+          <name>Duns' Maven Snapshots</name>
+          <releases>
+            <enabled>false</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+          <url>http://duns.github.com/maven-snapshots</url>
+        </pluginRepository>
+      </pluginRepositories>
 
   <build>
     <defaultGoal>install</defaultGoal>
@@ -35,7 +49,9 @@
                <exclude>processes/hadronic/models/chiral_inv_phase_space/calcul/G4NuMuXIntegration_Q2_QE.cc</exclude>
              </excludes>
              <includePaths>
+<!--
                <includePath>/Users/duns/cern/clhep/2.0.4.5/x86_64-MacOSX-g++/include</includePath>
+-->
                <includePath>source/digits_hits/detector/include</includePath>
                <includePath>source/digits_hits/digits/include</includePath>
                <includePath>source/digits_hits/hits/include</includePath>
@@ -177,4 +193,13 @@
       </plugin>
     </plugins>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>ch.cern</groupId>
+      <artifactId>clhep</artifactId>
+      <version>2.0.4.5-SNAPSHOT</version>
+      <type>nar</type>
+    </dependency>
+  </dependencies>
 </project>
