@@ -3,12 +3,14 @@
 .settings
 *.tar.gz
 *.zip
+cmake
 config
 data
 environments
 examples
 source
 target
+CMakeLists.txt
 Configure
 LICENSE
 ReleaseNotes
